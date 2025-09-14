@@ -16,5 +16,23 @@ module.exports = function (api) {
             ["babel-preset-expo", {jsxImportSource: "nativewind"}],
             "nativewind/babel",
         ],
+        plugins: [
+            ['module-resolver', {
+                extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
+                alias: {
+                    '@': './',
+                    // '@tn/libs': './packages/libs',
+                    '@tn/constants': './packages/constants',
+                    '@tn/hooks': './packages/hooks',
+                    // '@tn/atoms': './components/atoms',
+                    // '@tn/molecules': './components/molecules',
+                    // With Indexes
+                    // '@libs': './packages/libs/index',
+                    // '@atoms': './components/atoms/index',
+                    // '@molecules': './components/molecules/index',
+                    // '@constants': './constants/index',
+                }
+            }]
+        ]
   };
 };
