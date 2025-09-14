@@ -94,3 +94,6 @@ web-build/
 # IDE
 .idea
 .vscode
+
+# Resources
+.husky
