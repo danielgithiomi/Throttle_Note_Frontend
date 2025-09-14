@@ -1,5 +1,5 @@
 module.exports = function (api) {
-  api.cache(true);
+    api.cache(true);
 
     const isStorybookEnabled = process.env.STORYBOOK_ENABLED === "true";
 
@@ -35,5 +35,5 @@ module.exports = function (api) {
                 }
             }]
         ]
-  };
+    };
 };
