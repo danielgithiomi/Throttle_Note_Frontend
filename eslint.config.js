@@ -1,5 +1,5 @@
-const reactPlugin = require('eslint-plugin-react');
-const reactHooksPlugin = require('eslint-plugin-react-hooks');
+const reactPlugin = require("eslint-plugin-react");
+const reactHooksPlugin = require("eslint-plugin-react-hooks");
 
 module.exports = [
   {
@@ -25,12 +25,12 @@ module.exports = [
     },
     plugins: {
       react: reactPlugin,
-      'react-hooks': reactHooksPlugin,
+      "react-hooks": reactHooksPlugin,
     },
     settings: {
       react: {
-        version: 'detect',
-        runtime: 'automatic', // Use the new JSX transform
+        version: "detect",
+        runtime: "automatic", // Use the new JSX transform
       },
     },
     rules: {
