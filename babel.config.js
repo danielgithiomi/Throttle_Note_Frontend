@@ -28,9 +28,10 @@ module.exports = function (api) {
                     // '@tn/molecules': './components/molecules',
                     // With Indexes
                     // '@libs': './packages/libs/index',
+                    '@hooks': './packages/hooks/index',
                     // '@atoms': './components/atoms/index',
                     // '@molecules': './components/molecules/index',
-                    // '@constants': './constants/index',
+                    '@constants': './packages/constants/index',
                 }
             }]
         ]

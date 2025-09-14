@@ -7,11 +7,18 @@
       "@/*": [
         "./*"
       ],
+      "@tn/hooks/*": [
+        "./packages/hooks/*"
+      ],
       "@tn/constants/*": [
         "./packages/constants/*"
       ],
-      "@tn/hooks/*": [
-        "./packages/hooks/*"
+      // With Index Files
+      "@hooks": [
+        "./packages/hooks/index"
+      ],
+      "@constants": [
+        "./packages/constants/index"
       ]
     }
   },
