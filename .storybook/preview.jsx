@@ -8,11 +8,16 @@ const preview = {
                 date: /Date$/,
             },
         },
+        alignItems: false,
+        justifyContent: false,
     },
     decorators: [
         (Story, {parameters}) => {
 
-            const theme = useColorScheme() ?? 'light';
+            // eslint-disable-next-line no-console
+            console.log("Parameters", parameters);
+
+            const theme = useColorScheme() ?? "light";
 
             return (
                 <View
@@ -20,14 +25,18 @@ const preview = {
                         flex: 1,
                         backgroundColor:
                             parameters.noBackground === true
-                                ? theme === "light" ? "#0a7ea4" : "#004560"
+                                ? theme === "light"
+                                    ? "#0a7ea4"
+                                    : "#004560"
                                 : "#fff",
                         padding: 8,
+                        alignItems: parameters.itemsCenter === true ? "center" : "",
+                        justifyItems: parameters.justifyCenter === true ? "center" : "",
                     }}
                 >
                     <Story/>
                 </View>
-            )
+            );
         },
     ],
 };
