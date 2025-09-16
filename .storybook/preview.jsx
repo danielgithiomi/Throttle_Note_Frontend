@@ -1,30 +1,40 @@
-import { View } from "react-native";
+import {useColorScheme, View} from "react-native";
 
-/** @type{import("@storybook/react").Preview} */
 const preview = {
-  parameters: {
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/,
-      },
+    parameters: {
+        controls: {
+            matchers: {
+                color: /(background|color)$/i,
+                date: /Date$/,
+            },
+        },
+        themedBackground: true,
     },
-  },
+    decorators: [
+        (Story, {parameters}) => {
 
-  decorators: [
-    (Story, { parameters }) => (
-      <View
-        style={{
-          flex: 1,
-          backgroundColor:
-            parameters.noBackground === true ? undefined : "#26c6da",
-          padding: 8,
-        }}
-      >
-        <Story />
-      </View>
-    ),
-  ],
+            const theme = useColorScheme() ?? "light";
+
+            return (
+                <View
+                    style={{
+                        flex: 1,
+                        backgroundColor:
+                            parameters.themedBackground === true
+                                ? theme === "light"
+                                    ? "#0a7ea4"
+                                    : "#004560"
+                                : "#fff",
+                        padding: 8,
+                        alignItems: parameters.itemsCenter === true ? "center" : "start",
+                        justifyItems: parameters.justifyCenter === true ? "center" : "start",
+                    }}
+                >
+                    <Story/>
+                </View>
+            );
+        },
+    ],
 };
 
 export default preview;
