@@ -1,14 +1,12 @@
-import {View} from "react-native";
 import {TNFButton} from "./TNFButton";
-import {ReactElement} from "react";
 
 const meta = {
     title: "Components/TNFButton",
     component: TNFButton,
     parameters: {
-        notes:
-            "A customizable button component with support for custom styling and labels.",
-        noBackground: true,
+        notes: "A customizable button component with support for custom styling and labels.",
+        itemsCenter: true,
+        justifyCenter: true,
     },
     argTypes: {
         buttonLabel: {
@@ -31,14 +29,7 @@ const meta = {
     args: {
         id: "storybook-button",
         buttonLabel: "Click me",
-    },
-    decorators: [
-        (Story: ReactElement) => (
-            <View className="flex-1 bg-red-600 items-center justify-center">
-                {Story}
-            </View>
-        ),
-    ],
+    }
 };
 
 export default meta;
