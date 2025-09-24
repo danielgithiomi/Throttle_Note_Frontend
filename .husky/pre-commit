@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-. "$(dirname "$0")/husky.sh"
 
 echo "🔎 Running type check and lint before commit…"
 npm run check-types

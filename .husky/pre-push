@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-. "$(dirname "$0")/husky.sh"
 
 echo "🧪 Running tests before push…"
 npm test:all
