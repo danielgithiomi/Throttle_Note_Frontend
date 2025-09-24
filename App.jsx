@@ -1,20 +1,19 @@
 import Constants from "expo-constants";
-import {LogBox, StyleSheet, Text, View} from "react-native";
+import { LogBox, StyleSheet, Text, View } from "react-native";
 
 LogBox.ignoreAllLogs();
 
 const storybookEnabled =
   Constants?.expoConfig?.extra?.storybookEnabled ?? false;
 
-// Only import CSS when not in Storybook mode
 if (!storybookEnabled) {
-    require("./global.css");
+  require("./global.css");
 }
 
 function App() {
   return (
-    <View style={[styles.container, { backgroundColor: "red" }]}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+    <View style={styles.container} className="bg-blue-500">
+      <Text>This is your app running!</Text>
     </View>
   );
 }
