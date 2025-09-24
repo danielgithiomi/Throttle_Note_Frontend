@@ -8,7 +8,7 @@ commit_msg=$(cat "$commit_msg_file")
 # - Space and section in parentheses e.g. (Root-Project)
 # - Space and ticket id in quotes e.g. 'TNF-001':
 # - Then a brief summary
-pattern='^(Feat|Fix|Ref|Config) \([^)]+\) \'[A-Z]+-[0-9]+\'\:.+'
+pattern="^(Feat|Fix|Ref|Config) \([^)]+\) '[A-Z]+-[0-9]+':.+$"
 
 if ! echo "$commit_msg" | grep -Eq "$pattern"; then
   echo "❌ Invalid commit message format."
